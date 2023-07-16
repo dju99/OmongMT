@@ -1,6 +1,25 @@
 #container {
     width: 100%;
-    text-align: center;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    overflow: hidden;
+}
+
+#container::after {
+    content: "";
+    background-image: url('../오몽.jpg');
+    opacity: 0.08;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
 }
 
 button {
