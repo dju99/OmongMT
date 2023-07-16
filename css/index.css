@@ -10,13 +10,15 @@ body {
 
 .text {
     font-family: 'Bagel Fat One', cursive;
-    font-size: 200px;
     margin: 0px 70px 0px 70px;
     text-align: center;
+    font-size: 150px;
 }
 
 #title {
     text-align: center;
+    width: 40%;
+    height: 40%;
 }
 
 body::after {
