@@ -22,8 +22,8 @@ body::after{
 }
 
 #container {
-    width: 1280px;
-    height: 800px;
+    width: 1373px;
+    height: 900px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
