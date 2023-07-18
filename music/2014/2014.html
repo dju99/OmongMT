@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="../../css/history/history.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #country_img {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 40%;
+        }
+
+        #country_img img {
+            margin-bottom: 10px;
+            width: 100%;
+            object-fit: contain;
+        }
+
+        #container img {
+            display: none;
+            /* 초기에 모든 사진 숨김 */
+            max-width: 100%;
+            height: auto;
+        }
+
+        #container h1,
+        #container h2 {
+            display: none;
+            /* 초기에 모든 제목 숨김 */
+            max-width: 100%;
+            height: auto;
+            text-align: center;
+        }
+
+        #imageButtons {
+            position: fixed;
+            top: 40px;
+        }
+
+        button {
+            width: 80px;
+            height: 45px;
+            border: #d2f7ff 1px solid;
+            border-radius: 20px;
+            background-color: #d2f7ff;
+            margin: 10px;
+            font-size: 14px;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        #container div {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="country_img">
+            <img src="../../오몽로고.png" id="logo" style="width: 800px; height: auto;">
+            <h1></h1>
+            <h2></h2>
+            <div id="1">
+                <img src="../../music/2014/썸.jpg">
+                <h1>소유</h1>
+                <h2>썸</h2>
+            </div>
+            <div id="2">
+                <img src="../../music/2014/야생화.jpg">
+                <h1>박효신</h1>
+                <h2>야생화</h2>
+            </div>
+            <div id="3">
+                <img src="../../music/2014/눈코입.jpg">
+                <h1>태양</h1>
+                <h2>눈, 코, 입</h2>
+            </div>
+            <div id="4">
+                <img src="../../music/2014/금요일에만나요.jpg">
+                <h1>아이유</h1>
+                <h2>금요일에 만나요</h2>
+            </div>
+            <div id="5">
+                <img src="../../music/2014/한여름밤의꿀.jpg">
+                <h1>San E</h1>
+                <h2>한여름밤의 꿀</h2>
+            </div>
+            <div id="6">
+                <img src="../../music/2014/봄사랑벚꽃말고.jpg">
+                <h1>HIGH4</h1>
+                <h2>봄 사랑 벚꽃 말고</h2>
+            </div>
+            <div id="7">
+                <img src="../../music/2014/미스터츄.jpg">
+                <h1>Apink</h1>
+                <h2>Mr. Chu</h2>
+            </div>
+            <div id="8">
+                <img src="../../music/2014/너의의미.jpg">
+                <h1>아이유</h1>
+                <h2>너의 의미</h2>
+            </div>
+            <div id="9">
+                <img src="../../music/2014/썸띵.jpg">
+                <h1>걸스데이</h1>
+                <h2>Something</h2>
+            </div>
+            <div id="10">
+                <img src="../../music/2014/200퍼센트.jpg">
+                <h1>AKMU</h1>
+                <h2>200%</h2>
+            </div>
+        </div>
+        <div id="imageButtons">
+            <button onclick="showImageByRank(1)">1위</button>
+            <button onclick="showImageByRank(2)">2위</button>
+            <button onclick="showImageByRank(3)">3위</button>
+            <button onclick="showImageByRank(4)">4위</button>
+            <button onclick="showImageByRank(5)">5위</button>
+            <button onclick="showImageByRank(6)">6위</button>
+            <button onclick="showImageByRank(7)">7위</button>
+            <button onclick="showImageByRank(8)">8위</button>
+            <button onclick="showImageByRank(9)">9위</button>
+            <button onclick="showImageByRank(10)">10위</button>
+        </div>
+    </div>
+    <script>
+        var imageContainers = document.querySelectorAll('#country_img div');
+        var rankButtons = document.querySelectorAll('#imageButtons button');
+
+        function hideAllImagesAndTitles() {
+            for (var i = 0; i < imageContainers.length; i++) {
+                imageContainers[i].querySelector('img').style.display = 'none'; // 이미지 숨김
+                imageContainers[i].querySelector('h1').style.display = 'none'; // 이미지 숨김
+                imageContainers[i].querySelector('h2').style.display = 'none'; // 제목 숨김
+            }
+        }
+
+        function showImageByRank(rank) {
+            hideAllImagesAndTitles();
+            var containerIndex = rank - 1;
+            imageContainers[containerIndex].querySelector('img').style.display = 'block'; // 이미지 표시
+            imageContainers[containerIndex].querySelector('h1').style.display = 'block'; // 이미지 표시
+            imageContainers[containerIndex].querySelector('h2').style.display = 'block'; // 제목 표시
+        }
+    </script>
+</body>
+
+</html>
+</body>
+
+</html>
