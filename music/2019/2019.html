@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="../../css/history/history.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #country_img {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 40%;
+        }
+
+        #country_img img {
+            margin-bottom: 10px;
+            width: 100%;
+            object-fit: contain;
+        }
+
+        #container img {
+            display: none;
+            /* 초기에 모든 사진 숨김 */
+            max-width: 100%;
+            height: auto;
+        }
+
+        #container h1,
+        #container h2 {
+            display: none;
+            /* 초기에 모든 제목 숨김 */
+            max-width: 100%;
+            height: auto;
+            text-align: center;
+        }
+
+        #imageButtons {
+            position: fixed;
+            top: 40px;
+        }
+
+        button {
+            width: 80px;
+            height: 45px;
+            border: #d2f7ff 1px solid;
+            border-radius: 20px;
+            background-color: #d2f7ff;
+            margin: 10px;
+            font-size: 14px;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        #container div {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="country_img">
+            <img src="../../오몽로고.png" id="logo" style="width: 800px; height: auto;">
+            <h1></h1>
+            <h2></h2>
+            <div id="1">
+                <img src="../../music/2019/사랑에연습이있었다면.jpg">
+                <h1>임재현</h1>
+                <h2>사랑에 연습이 있었다면</h2>
+            </div>
+            <div id="2">
+                <img src="../../music/2019/그때가좋았어.jpg">
+                <h1>케이시</h1>
+                <h2>그때가 좋았어</h2>
+            </div>
+            <div id="3">
+                <img src="../../music/2019/작은것들을위한시.jpg">
+                <h1>방탄소년단</h1>
+                <h2>작은 것들을 위한 시</h2>
+            </div>
+            <div id="4">
+                <img src="../../music/2019/넘쳐흘러.jpg">
+                <h1>엠씨더맥스</h1>
+                <h2>넘쳐흘러</h2>
+            </div>
+            <div id="5">
+                <img src="../../music/2019/모든날모든순간.jpg">
+                <h1>폴킴</h1>
+                <h2>모든 날, 모든 순간</h2>
+            </div>
+            <div id="6">
+                <img src="../../music/2019/너를만나.jpg">
+                <h1>폴킴</h1>
+                <h2>너를 만나</h2>
+            </div>
+            <div id="7">
+                <img src="../../music/2019/사계.jpg">
+                <h1>태연</h1>
+                <h2>사계</h2>
+            </div>
+            <div id="8">
+                <img src="../../music/2019/주저하는연인들을위해.jpg">
+                <h1>잔나비</h1>
+                <h2>주저하는 연인들을 위해</h2>
+            </div>
+            <div id="9">
+                <img src="../../music/2019/니소식.jpg">
+                <h1>송하예</h1>
+                <h2>니 소식</h2>
+            </div>
+            <div id="10">
+                <img src="../../music/2019/오늘도빛나는너에게.jpg">
+                <h1>마크툽</h1>
+                <h2>오늘도 빛나는 너에게</h2>
+            </div>
+        </div>
+        <div id="imageButtons">
+            <button onclick="showImageByRank(1)">1위</button>
+            <button onclick="showImageByRank(2)">2위</button>
+            <button onclick="showImageByRank(3)">3위</button>
+            <button onclick="showImageByRank(4)">4위</button>
+            <button onclick="showImageByRank(5)">5위</button>
+            <button onclick="showImageByRank(6)">6위</button>
+            <button onclick="showImageByRank(7)">7위</button>
+            <button onclick="showImageByRank(8)">8위</button>
+            <button onclick="showImageByRank(9)">9위</button>
+            <button onclick="showImageByRank(10)">10위</button>
+        </div>
+    </div>
+    <script>
+        var imageContainers = document.querySelectorAll('#country_img div');
+        var rankButtons = document.querySelectorAll('#imageButtons button');
+
+        function hideAllImagesAndTitles() {
+            for (var i = 0; i < imageContainers.length; i++) {
+                imageContainers[i].querySelector('img').style.display = 'none'; // 이미지 숨김
+                imageContainers[i].querySelector('h1').style.display = 'none'; // 이미지 숨김
+                imageContainers[i].querySelector('h2').style.display = 'none'; // 제목 숨김
+            }
+        }
+
+        function showImageByRank(rank) {
+            hideAllImagesAndTitles();
+            var containerIndex = rank - 1;
+            imageContainers[containerIndex].querySelector('img').style.display = 'block'; // 이미지 표시
+            imageContainers[containerIndex].querySelector('h1').style.display = 'block'; // 이미지 표시
+            imageContainers[containerIndex].querySelector('h2').style.display = 'block'; // 제목 표시
+        }
+    </script>
+</body>
+
+</html>
+</body>
+
+</html>

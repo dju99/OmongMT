@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="../../css/history/history.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #country_img {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 40%;
+        }
+
+        #country_img img {
+            margin-bottom: 10px;
+            width: 100%;
+            object-fit: contain;
+        }
+
+        #container img {
+            display: none;
+            /* 초기에 모든 사진 숨김 */
+            max-width: 100%;
+            height: auto;
+        }
+
+        #container h1,
+        #container h2 {
+            display: none;
+            /* 초기에 모든 제목 숨김 */
+            max-width: 100%;
+            height: auto;
+            text-align: center;
+        }
+
+        #imageButtons {
+            position: fixed;
+            top: 40px;
+        }
+
+        button {
+            width: 80px;
+            height: 45px;
+            border: #d2f7ff 1px solid;
+            border-radius: 20px;
+            background-color: #d2f7ff;
+            margin: 10px;
+            font-size: 14px;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        #container div {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="country_img">
+            <img src="../../오몽로고.png" id="logo" style="width: 800px; height: auto;">
+            <h1></h1>
+            <h2></h2>
+            <div id="1">
+                <img src="../../music/2023/퀸카.jpg">
+                <h1>(여자)아이들</h1>
+                <h2>퀸카</h2>
+            </div>
+            <div id="2">
+                <img src="../../music/2023/iam.jpg">
+                <h1>IVE</h1>
+                <h2>I AM</h2>
+            </div>
+            <div id="3">
+                <img src="../../music/2023/스파이시.jpg">
+                <h1>aespa</h1>
+                <h2>Spicy</h2>
+            </div>
+            <div id="4">
+                <img src="../../music/2023/unforgiven.jpg">
+                <h1>LE SSERAFIM</h1>
+                <h2>UNFORGIVEN</h2>
+            </div>
+            <div id="5">
+                <img src="../../music/2023/kitsch.jpg">
+                <h1>IVE</h1>
+                <h2>Kitsch</h2>
+            </div>
+            <div id="6">
+                <img src="../../music/2023/이프푸.jpg">
+                <h1>LE SSERAFIM</h1>
+                <h2>이브, 프시케 그리고 푸른 수염의 아내</h2>
+            </div>
+            <div id="7">
+                <img src="../../music/2023/꽃.jpg">
+                <h1>지수</h1>
+                <h2>꽃</h2>
+            </div>
+            <div id="8">
+                <img src="../../music/2023/하입보이.jpg">
+                <h1>NewJeans</h1>
+                <h2>Hype boy</h2>
+            </div>
+            <div id="9">
+                <img src="../../music/2023/손오공.jpg">
+                <h1>세븐틴</h1>
+                <h2>손오공</h2>
+            </div>
+            <div id="10">
+                <img src="../../music/2023/디토.jpg">
+                <h1>NewJeans</h1>
+                <h2>Ditto</h2>
+            </div>
+        </div>
+        <div id="imageButtons">
+            <button onclick="showImageByRank(1)">1위</button>
+            <button onclick="showImageByRank(2)">2위</button>
+            <button onclick="showImageByRank(3)">3위</button>
+            <button onclick="showImageByRank(4)">4위</button>
+            <button onclick="showImageByRank(5)">5위</button>
+            <button onclick="showImageByRank(6)">6위</button>
+            <button onclick="showImageByRank(7)">7위</button>
+            <button onclick="showImageByRank(8)">8위</button>
+            <button onclick="showImageByRank(9)">9위</button>
+            <button onclick="showImageByRank(10)">10위</button>
+        </div>
+    </div>
+    <script>
+        var imageContainers = document.querySelectorAll('#country_img div');
+        var rankButtons = document.querySelectorAll('#imageButtons button');
+
+        function hideAllImagesAndTitles() {
+            for (var i = 0; i < imageContainers.length; i++) {
+                imageContainers[i].querySelector('img').style.display = 'none'; // 이미지 숨김
+                imageContainers[i].querySelector('h1').style.display = 'none'; // 이미지 숨김
+                imageContainers[i].querySelector('h2').style.display = 'none'; // 제목 숨김
+            }
+        }
+
+        function showImageByRank(rank) {
+            hideAllImagesAndTitles();
+            var containerIndex = rank - 1;
+            imageContainers[containerIndex].querySelector('img').style.display = 'block'; // 이미지 표시
+            imageContainers[containerIndex].querySelector('h1').style.display = 'block'; // 이미지 표시
+            imageContainers[containerIndex].querySelector('h2').style.display = 'block'; // 제목 표시
+        }
+    </script>
+</body>
+
+</html>
+</body>
+
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="../../css/history/history.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #country_img {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 40%;
+        }
+
+        #country_img img {
+            margin-bottom: 10px;
+            width: 100%;
+            object-fit: contain;
+        }
+
+        #container img {
+            display: none;
+            /* 초기에 모든 사진 숨김 */
+            max-width: 100%;
+            height: auto;
+        }
+
+        #container h1,
+        #container h2 {
+            display: none;
+            /* 초기에 모든 제목 숨김 */
+            max-width: 100%;
+            height: auto;
+            text-align: center;
+        }
+
+        #imageButtons {
+            position: fixed;
+            top: 40px;
+        }
+
+        button {
+            width: 80px;
+            height: 45px;
+            border: #d2f7ff 1px solid;
+            border-radius: 20px;
+            background-color: #d2f7ff;
+            margin: 10px;
+            font-size: 14px;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        #container div {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="country_img">
+            <img src="../../오몽로고.png" id="logo" style="width: 800px; height: auto;">
+            <h1></h1>
+            <h2></h2>
+            <div id="1">
+                <img src="../../music/2021/셀러브리티.jpg">
+                <h1>아이유</h1>
+                <h2>Celebrity</h2>
+            </div>
+            <div id="2">
+                <img src="../../music/2021/롤린.jpg">
+                <h1>브레이브걸스</h1>
+                <h2>롤린</h2>
+            </div>
+            <div id="3">
+                <img src="../../music/2021/다이너마이트.jpg">
+                <h1>방탄소년단</h1>
+                <h2>Dynamite</h2>
+            </div>
+            <div id="4">
+                <img src="../../music/2021/넥스트레벨.jpg">
+                <h1>aespa</h1>
+                <h2>Next Level</h2>
+            </div>
+            <div id="5">
+                <img src="../../music/2021/라일락.jpg">
+                <h1>아이유</h1>
+                <h2>라일락</h2>
+            </div>
+            <div id="6">
+                <img src="../../music/2021/밤하늘의별을.jpg">
+                <h1>경서</h1>
+                <h2>밤하늘의 별을</h2>
+            </div>
+            <div id="7">
+                <img src="../../music/2021/신호등.jpg">
+                <h1>이무진</h1>
+                <h2>신호등</h2>
+            </div>
+            <div id="8">
+                <img src="../../music/2021/버터.jpg">
+                <h1>방탄소년단</h1>
+                <h2>Butter</h2>
+            </div>
+            <div id="9">
+                <img src="../../music/2021/내손을잡아.jpg">
+                <h1>아이유</h1>
+                <h2>내 손을 잡아</h2>
+            </div>
+            <div id="10">
+                <img src="../../music/2021/밝게빛나는별이되어비춰줄게.jpg">
+                <h1>송이한</h1>
+                <h2>밝게 빛나는 별이 되어 비춰줄게</h2>
+            </div>
+        </div>
+        <div id="imageButtons">
+            <button onclick="showImageByRank(1)">1위</button>
+            <button onclick="showImageByRank(2)">2위</button>
+            <button onclick="showImageByRank(3)">3위</button>
+            <button onclick="showImageByRank(4)">4위</button>
+            <button onclick="showImageByRank(5)">5위</button>
+            <button onclick="showImageByRank(6)">6위</button>
+            <button onclick="showImageByRank(7)">7위</button>
+            <button onclick="showImageByRank(8)">8위</button>
+            <button onclick="showImageByRank(9)">9위</button>
+            <button onclick="showImageByRank(10)">10위</button>
+        </div>
+    </div>
+    <script>
+        var imageContainers = document.querySelectorAll('#country_img div');
+        var rankButtons = document.querySelectorAll('#imageButtons button');
+
+        function hideAllImagesAndTitles() {
+            for (var i = 0; i < imageContainers.length; i++) {
+                imageContainers[i].querySelector('img').style.display = 'none'; // 이미지 숨김
+                imageContainers[i].querySelector('h1').style.display = 'none'; // 이미지 숨김
+                imageContainers[i].querySelector('h2').style.display = 'none'; // 제목 숨김
+            }
+        }
+
+        function showImageByRank(rank) {
+            hideAllImagesAndTitles();
+            var containerIndex = rank - 1;
+            imageContainers[containerIndex].querySelector('img').style.display = 'block'; // 이미지 표시
+            imageContainers[containerIndex].querySelector('h1').style.display = 'block'; // 이미지 표시
+            imageContainers[containerIndex].querySelector('h2').style.display = 'block'; // 제목 표시
+        }
+    </script>
+</body>
+
+</html>
+</body>
+
+</html>

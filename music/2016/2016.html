@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="../../css/history/history.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #country_img {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 40%;
+        }
+
+        #country_img img {
+            margin-bottom: 10px;
+            width: 100%;
+            object-fit: contain;
+        }
+
+        #container img {
+            display: none;
+            /* 초기에 모든 사진 숨김 */
+            max-width: 100%;
+            height: auto;
+        }
+
+        #container h1,
+        #container h2 {
+            display: none;
+            /* 초기에 모든 제목 숨김 */
+            max-width: 100%;
+            height: auto;
+            text-align: center;
+        }
+
+        #imageButtons {
+            position: fixed;
+            top: 40px;
+        }
+
+        button {
+            width: 80px;
+            height: 45px;
+            border: #d2f7ff 1px solid;
+            border-radius: 20px;
+            background-color: #d2f7ff;
+            margin: 10px;
+            font-size: 14px;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        #container div {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="country_img">
+            <img src="../../오몽로고.png" id="logo" style="width: 800px; height: auto;">
+            <h1></h1>
+            <h2></h2>
+            <div id="1">
+                <img src="../../music/2016/cheerup.jpg">
+                <h1>TWICE</h1>
+                <h2>트와이스</h2>
+            </div>
+            <div id="2">
+                <img src="../../music/2016/시간을달려서.jpg">
+                <h1>여자친구</h1>
+                <h2>시간을 달려서</h2>
+            </div>
+            <div id="3">
+                <img src="../../music/2016/어디에도.jpg">
+                <h1>엠씨더맥스</h1>
+                <h2>어디에도</h2>
+            </div>
+            <div id="4">
+                <img src="../../music/2016/널사랑하지않아.jpg">
+                <h1>어반자카파</h1>
+                <h2>널 사랑하지 않아</h2>
+            </div>
+            <div id="5">
+                <img src="../../music/2016/이사랑.jpg">
+                <h1>다비치</h1>
+                <h2>이 사랑</h2>
+            </div>
+            <div id="6">
+                <img src="../../music/2016/이소설의끝을다시써보려해.jpg">
+                <h1>한동근</h1>
+                <h2>이 소설의 끝을 다시 써보려 해</h2>
+            </div>
+            <div id="7">
+                <img src="../../music/2016/너는나나는너.jpg">
+                <h1>지코</h1>
+                <h2>너는 나 나는 너</h2>
+            </div>
+            <div id="8">
+                <img src="../../music/2016/YouAreMyEverything.jpg">
+                <h1>거미</h1>
+                <h2>You Are My Everything</h2>
+            </div>
+            <div id="9">
+                <img src="../../music/2016/우아하게.jpg">
+                <h1>TWICE</h1>
+                <h2>OOH-AHH하게</h2>
+            </div>
+            <div id="10">
+                <img src="../../music/2016/걱정말아요그대.jpg">
+                <h1>이적</h1>
+                <h2>걱정말아요 그대</h2>
+            </div>
+        </div>
+        <div id="imageButtons">
+            <button onclick="showImageByRank(1)">1위</button>
+            <button onclick="showImageByRank(2)">2위</button>
+            <button onclick="showImageByRank(3)">3위</button>
+            <button onclick="showImageByRank(4)">4위</button>
+            <button onclick="showImageByRank(5)">5위</button>
+            <button onclick="showImageByRank(6)">6위</button>
+            <button onclick="showImageByRank(7)">7위</button>
+            <button onclick="showImageByRank(8)">8위</button>
+            <button onclick="showImageByRank(9)">9위</button>
+            <button onclick="showImageByRank(10)">10위</button>
+        </div>
+    </div>
+    <script>
+        var imageContainers = document.querySelectorAll('#country_img div');
+        var rankButtons = document.querySelectorAll('#imageButtons button');
+
+        function hideAllImagesAndTitles() {
+            for (var i = 0; i < imageContainers.length; i++) {
+                imageContainers[i].querySelector('img').style.display = 'none'; // 이미지 숨김
+                imageContainers[i].querySelector('h1').style.display = 'none'; // 이미지 숨김
+                imageContainers[i].querySelector('h2').style.display = 'none'; // 제목 숨김
+            }
+        }
+
+        function showImageByRank(rank) {
+            hideAllImagesAndTitles();
+            var containerIndex = rank - 1;
+            imageContainers[containerIndex].querySelector('img').style.display = 'block'; // 이미지 표시
+            imageContainers[containerIndex].querySelector('h1').style.display = 'block'; // 이미지 표시
+            imageContainers[containerIndex].querySelector('h2').style.display = 'block'; // 제목 표시
+        }
+    </script>
+</body>
+
+</html>
+</body>
+
+</html>
