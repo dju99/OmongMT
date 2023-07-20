@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="../../css/history/history.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #country_img {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 40%;
+            /* 높이 제거 */
+        }
+
+        #country_img img {
+            margin-bottom: 10px;
+            width: 100%;
+            object-fit: contain;
+            /* 변경 */
+        }
+
+        #container img {
+            display: none;
+            /* 초기에 모든 사진 숨김 */
+            max-width: 100%;
+            height: auto;
+        }
+
+        #imageButtons {
+            position: fixed;
+            top: 40px;
+        }
+
+        button {
+            width: 100px;
+            height: 50px;
+            border: #d2f7ff 1px solid;
+            border-radius: 20px;
+            background-color: #d2f7ff;
+            margin: 10px;
+            font-size: 14px;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="country_img">
+            <img src="../../오몽로고.png" id="logo" style="width: 800px; height: auto;">
+            <img src="../song/img/그라데이션.PNG">
+            <img src="../song/img/꽃.PNG">
+            <img src="../song/img/헤픈우연.PNG">
+            <img src="../song/img/손오공.PNG">
+            <img src="../song/img/스파이시.PNG">
+            <img src="../song/img/시작.PNG">
+            <img src="../song/img/예뻤어.PNG">
+            <img src="../song/img/사건의지평선.PNG">
+            <img src="../song/img/이브프시케그리고푸른수염의아내.PNG">
+            <img src="../song/img/너를생각해.PNG">
+            <img src="../song/img/넥스트레벨.PNG">
+            <img src="../song/img/애프터라이크.PNG">
+            <img src="../song/img/옥탑방.PNG">
+            <img src="../song/img/위잉위잉.PNG">
+            <img src="../song/img/취향저격.PNG">
+            <img src="../song/img/파이팅해야지.PNG">
+            <img src="../song/img/하입보이.PNG">
+            <img src="../song/img/폰서트.PNG">
+            <img src="../song/img/작은것들을위한시.PNG">
+            <img src="../song/img/정이라고하자.PNG">
+            <img src="../song/img/좋은밤좋은꿈.PNG">
+            <img src="../song/img/다시여기바닷가.PNG">
+            <img src="../song/img/다이너마이트.PNG">
+            <img src="../song/img/어떻게이별까지.PNG">
+            <img src="../song/img/사실말야.PNG">
+            <img src="../song/img/주저하는연인들을위해.PNG">
+            <img src="../song/img/나에게로떠나는여행.PNG">
+            <img src="../song/img/한페이지가될수있게.PNG">
+            <img src="../song/img/흔들리는꽃들속에서.PNG">
+            <img src="../song/img/건물사이에피어난장미.PNG">
+            <img src="../song/img/결혼까지생각했어.PNG">
+        </div>
+        <div id="imageButtons">
+            <button onclick="showNextImage()">Next</button>
+        </div>
+    </div>
+    <script>
+        var images = document.querySelectorAll('#country_img img');
+        var currentImageIndex = 0;
+
+        function showNextImage() {
+            images[currentImageIndex].style.display = 'none'; // 현재 이미지를 숨김
+
+            currentImageIndex = (currentImageIndex + 1) % images.length; // 다음 이미지 인덱스 계산
+
+            images[currentImageIndex].style.display = 'block'; // 다음 이미지를 보여줌
+        }
+
+        images[currentImageIndex].style.display = 'block'; // 초기 이미지 표시
+    </script>
+</body>
+
+</html>

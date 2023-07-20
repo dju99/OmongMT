@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="../../css/history/history.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #country_img {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 40%;
+            /* 높이 제거 */
+        }
+
+        #country_img img {
+            margin-bottom: 10px;
+            width: 100%;
+            object-fit: contain;
+            /* 변경 */
+        }
+
+        #container img {
+            display: none;
+            /* 초기에 모든 사진 숨김 */
+            max-width: 100%;
+            height: auto;
+        }
+
+        #imageButtons {
+            position: fixed;
+            top: 40px;
+        }
+
+        button {
+            width: 100px;
+            height: 50px;
+            border: #d2f7ff 1px solid;
+            border-radius: 20px;
+            background-color: #d2f7ff;
+            margin: 10px;
+            font-size: 14px;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="country_img">
+            <img src="../../오몽로고.png" id="logo" style="width: 800px; height: auto;">
+            <img src="../movie/img/나우유씨미.PNG">
+            <img src="../movie/img/너의이름은.PNG">
+            <img src="../movie/img/라라랜드.PNG">
+            <img src="../movie/img/레미제라블.PNG">
+            <img src="../movie/img/말할수없는비밀.PNG">
+            <img src="../movie/img/늑대소년.PNG">
+            <img src="../movie/img/건축학개론.PNG">
+            <img src="../movie/img/겨울왕국.PNG">
+            <img src="../movie/img/캡틴아메리카윈터솔져.PNG">
+            <img src="../movie/img/트랜스포머.PNG">
+            <img src="../movie/img/해운대.PNG">
+            <img src="../movie/img/과속스캔들.PNG">
+            <img src="../movie/img/인셉션.PNG">
+            <img src="../movie/img/인터스텔라.PNG">
+            <img src="../movie/img/극한직업.PNG">
+            <img src="../movie/img/기생충.PNG">
+            <img src="../movie/img/다크나이트라이즈.PNG">
+            <img src="../movie/img/최송병기활.PNG">
+            <img src="../movie/img/칠번방의선물.PNG">
+            <img src="../movie/img/엔트맨과와스프.PNG">
+            <img src="../movie/img/괴물.PNG">
+            <img src="../movie/img/국제시장.PNG">
+            <img src="../movie/img/닥터스트레인지.PNG">
+            <img src="../movie/img/드래곤길들이기.PNG">
+            <img src="../movie/img/탑건매버릭.PNG">
+            <img src="../movie/img/태극기휘날리며.PNG">
+            <img src="../movie/img/택시운전사.PNG">
+            <img src="../movie/img/신과함께죄와벌.PNG">
+            <img src="../movie/img/명량.PNG">
+            <img src="../movie/img/범죄도시.PNG">
+            <img src="../movie/img/베테랑.PNG">
+            <img src="../movie/img/보헤미안랩소디.PNG">
+            <img src="../movie/img/아바타.PNG">
+            <img src="../movie/img/악마를보았다.PNG">
+            <img src="../movie/img/알라딘.PNG">
+            <img src="../movie/img/어벤져스인피니티워.PNG">
+            <img src="../movie/img/쥬라기월드.PNG">
+            <img src="../movie/img/부산행.PNG">
+            <img src="../movie/img/설국열차.PNG">
+            <img src="../movie/img/스즈메의문단속.PNG">
+            <img src="../movie/img/왕의남자.PNG">
+            <img src="../movie/img/위플래쉬.PNG">
+
+
+        </div>
+        <div id="imageButtons">
+            <button onclick="showNextImage()">Next</button>
+        </div>
+    </div>
+    <script>
+        var images = document.querySelectorAll('#country_img img');
+        var currentImageIndex = 0;
+
+        function showNextImage() {
+            images[currentImageIndex].style.display = 'none'; // 현재 이미지를 숨김
+
+            currentImageIndex = (currentImageIndex + 1) % images.length; // 다음 이미지 인덱스 계산
+
+            images[currentImageIndex].style.display = 'block'; // 다음 이미지를 보여줌
+        }
+
+        images[currentImageIndex].style.display = 'block'; // 초기 이미지 표시
+    </script>
+</body>
+
+</html>
