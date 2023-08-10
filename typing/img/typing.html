@@ -23,7 +23,7 @@
 
         #country_img img {
             margin-bottom: 10px;
-            width: 100%;
+            width: 60%;
             object-fit: contain;
             /* 변경 */
         }
@@ -50,20 +50,18 @@
             font-size: 14px;
             font-family: 'Noto Sans KR', sans-serif;
         }
+
+        #logo {
+            width: 100%;
+        }
     </style>
 </head>
 
 <body>
     <div id="container">
         <div id="country_img">
-            <img src="../오몽로고.png" id="logo" style="width: 800px; height: auto;">
-            <img src="../speed/img/명품브랜드.PNG">
-            <img src="../speed/img/라면.PNG">
-            <img src="../speed/img/아이스크림.PNG">
-            <img src="../speed/img/공연곡.PNG">
-            <img src="../speed/img/4글자 걸그룹.PNG">
-            <img src="../speed/img/국내영화.PNG">
-            <img src="../speed/img/드라마.PNG">
+            <img src="../오몽로고.png" id="logo" style="width: 700px; height: auto; border: 1px solid white;">
+            <img src="../img/1.PNG"> 
         </div>
         <div id="imageButtons">
             <button onclick="showNextImage()">Next</button>
@@ -82,6 +80,10 @@
         }
 
         images[currentImageIndex].style.display = 'block'; // 초기 이미지 표시
+
+        // 명량: 30:13, 1:40:27, 
+        // 부산행: 21:00
+        // 관상: 4:44, 42:43, 1:20:18
     </script>
 </body>
 
