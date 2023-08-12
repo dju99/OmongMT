@@ -9,7 +9,7 @@
     <style>
         #container {
             display: flex;
-            flex-direction: column;
+            flex-direction:row;
             align-items: center;
         }
 
@@ -17,13 +17,13 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            width: 40%;
+            width: 60%;
             /* 높이 제거 */
         }
 
         #country_img img {
             margin-bottom: 10px;
-            width: 100%;
+            width: 60%;
             object-fit: contain;
             /* 변경 */
         }
@@ -37,7 +37,8 @@
 
         #imageButtons {
             position: fixed;
-            top: 40px;
+            top: 350px;
+            right: 40px;
         }
 
         button {
@@ -50,6 +51,10 @@
             font-size: 14px;
             font-family: 'Noto Sans KR', sans-serif;
         }
+
+        #logo {
+            width: 100%;
+        }
     </style>
 </head>
 
@@ -57,12 +62,11 @@
     <div id="container">
         <div id="country_img">
             <img src="../오몽로고.png" id="logo" style="width: 800px; height: auto;">
-            <img src="../speed/img/명품브랜드.PNG">
             <img src="../speed/img/라면.PNG">
+            <img src="../speed/img/명품브랜드.PNG">
             <img src="../speed/img/아이스크림.PNG">
             <img src="../speed/img/공연곡.PNG">
             <img src="../speed/img/4글자 걸그룹.PNG">
-            <img src="../speed/img/국내영화.PNG">
             <img src="../speed/img/드라마.PNG">
         </div>
         <div id="imageButtons">

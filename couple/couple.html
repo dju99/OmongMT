@@ -9,7 +9,7 @@
     <style>
         #container {
             display: flex;
-            flex-direction: column;
+            flex-direction:row;
             align-items: center;
         }
 
@@ -17,13 +17,13 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            width: 40%;
+            width: 60%;
             /* 높이 제거 */
         }
 
         #country_img img {
             margin-bottom: 10px;
-            width: 100%;
+            width: 60%;
             object-fit: contain;
             /* 변경 */
         }
@@ -37,7 +37,8 @@
 
         #imageButtons {
             position: fixed;
-            top: 40px;
+            top: 350px;
+            right: 40px;
         }
 
         button {
@@ -50,6 +51,10 @@
             font-size: 14px;
             font-family: 'Noto Sans KR', sans-serif;
         }
+
+        #logo {
+            width: 100%;
+        }
     </style>
 </head>
 
@@ -57,36 +62,7 @@
     <div id="container">
         <div id="country_img">
             <img src="../오몽로고.png" id="logo" style="width: 800px; height: auto;">
-            <img src="../couple/img/1.PNG">
-            <img src="../couple/img/2.PNG">
-            <img src="../couple/img/3.PNG">
-            <img src="../couple/img/4.PNG">
-            <img src="../couple/img/5.PNG">
-            <img src="../couple/img/6.PNG">
-            <img src="../couple/img/7.PNG">
-            <img src="../couple/img/8.PNG">
-            <img src="../couple/img/9.PNG">
-            <img src="../couple/img/10.PNG">
-            <img src="../couple/img/11.PNG">
-            <img src="../couple/img/12.PNG">
-            <img src="../couple/img/13.PNG">
-            <img src="../couple/img/14.PNG">
-            <img src="../couple/img/15.PNG">
-            <img src="../couple/img/16.PNG">
-            <img src="../couple/img/17.PNG">
-            <img src="../couple/img/19.PNG">
-            <img src="../couple/img/20.PNG">
-            <img src="../couple/img/21.PNG">
-            <img src="../couple/img/22.PNG">
-            <img src="../couple/img/23.PNG">
-            <img src="../couple/img/24.PNG">
-            <img src="../couple/img/26.PNG">
-            <img src="../couple/img/27.PNG">
-            <img src="../couple/img/28.PNG">
-            <img src="../couple/img/29.PNG">
-            <img src="../couple/img/30.PNG">
-            <img src="../couple/img/31.PNG">
-            <img src="../couple/img/32.PNG">
+            <img src="../couple/img/한국 위인.PNG">
         </div>
         <div id="imageButtons">
             <button onclick="showNextImage()">Next</button>
